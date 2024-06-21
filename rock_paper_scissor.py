@@ -17,11 +17,13 @@ def winner(user, comp):
 arr = {1: 'Rock🪨', 2: 'Paper📃', 3: 'Scissor✂️'}
 user_score = 0
 comp_score = 0
-for i in range(0,3):
+i = 0
+while i!=3:
     try:
         user = int(input('Press\n1: Rock🪨 \n2: Paper📃 \n3: Scissors✂️\n\n\n'))
         comp = randint(1,3)
         print(f'YOU     :{arr[user]}\nCOMPUTER:{arr[comp]}  \n')
+        i += 1
         if winner(user, comp):
             user_score += 1
         else:
